@@ -20,6 +20,8 @@ Includes some tweaks and tricks to get it working:
 ``` python
 from vit_grad_rollout import VITAttentionGradRollout
 
+model = torch.hub.load('facebookresearch/deit:main', 
+'deit_tiny_patch16_224', pretrained=True)
 grad_rollout = VITAttentionGradRollout(model, discard_ratio=0.9, head_fusion='max')
 mask = grad_rollout(input_tensor, category_index=243)
 
@@ -33,6 +35,9 @@ python vit_explain.py --image_path <image path> --head_fusion <mean, min or max>
 If category_index isn't specified, Attention Rollout will be used,
 otherwise Gradient Attention Rollout will be used.
 
+Notice that by default, this uses the 'Tiny' model from [Training data-efficient image transformers & distillation through attention](https://arxiv.org/abs/2012.12877)
+ hosted on torch hub.
+ 
 ##Where did the Transformer pay attention to in this image?##
 | Image | Vanilla Gradient Rollout  |  With discard_ratio+max fusion |
 | -------------------------|-------------------------|------------------------- |
