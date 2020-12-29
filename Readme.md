@@ -7,7 +7,7 @@ This repository implements methods for explainability in Vision Transformers.
 - Gradient Attention Rollout for class specific explainability. 
 *This is our attempt to further build upon and improve Attention Rollout.*
 
-- TBD Attention flow is work un progress.
+- TBD Attention flow is work in progress.
 
 Includes some tweaks and tricks to get it working:
 - Different Attention Head fusion methods, 
