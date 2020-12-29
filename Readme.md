@@ -39,7 +39,7 @@ Notice that by default, this uses the 'Tiny' model from [Training data-efficient
  hosted on torch hub.
  
 ##Where did the Transformer pay attention to in this image?##
-| Image | Vanilla Gradient Rollout  |  With discard_ratio+max fusion |
+| Image | Vanilla Attention Rollout  |  With discard_ratio+max fusion |
 | -------------------------|-------------------------|------------------------- |
 | ![](examples/both.png) | ![](examples/both_attention_rollout_0.000_mean.png) | ![](examples/both_attention_rollout_0.990_max.png)
 ![](examples/plane.png) | ![](examples/plane_attention_rollout_0.000_mean.png) | ![](examples/plane_attention_rollout_0.900_max.png) |
