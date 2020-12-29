@@ -44,6 +44,8 @@ Notice that by default, this uses the 'Tiny' model from [Training data-efficient
 | ![](examples/both.png) | ![](examples/both_attention_rollout_0.000_mean.png) | ![](examples/both_attention_rollout_0.990_max.png)
 ![](examples/plane.png) | ![](examples/plane_attention_rollout_0.000_mean.png) | ![](examples/plane_attention_rollout_0.900_max.png) |
 ![](examples/dogbird.png) | ![](examples/dogbird_attention_rollout_0.000_mean.png) | ![](examples/dogbird_attention_rollout_0.900_max.png) |
+![](examples/plane2.png) | ![](examples/plane2_attention_rollout_0.000_mean.png) | ![](examples/plane2_attention_rollout_0.900_max.png) |
+
 
 ## Filtering the lowest attentions in every layer
 
