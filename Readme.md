@@ -2,7 +2,7 @@
 
 This repository implements methods for explainability in Visual Transformers.
 
-##Currently implemented:
+## Currently implemented:
 - Attention Rollout.
 - Gradient Attention Rollout for class specific explainability. 
 *This is our attempt to further build upon and improve Attention Rollout.*
@@ -17,7 +17,7 @@ Includes some tweaks and tricks to get it working:
 ## Usage
 
 - From code
-```
+``` python
 from vit_grad_rollout import VITAttentionGradRollout
 
 grad_rollout = VITAttentionGradRollout(model, discard_ratio=0.9, head_fusion='max')
@@ -47,6 +47,7 @@ otherwise Gradient Attention Rollout will be used.
 Removes noise by keeping the strongest attentions.
 
 Results for dIfferent values:
+
 ![](examples/both_discard_ratio.gif) ![](examples/plane_discard_ratio.gif)
 
 ## Different Attention Head Fusions
