@@ -1,6 +1,6 @@
 # Explainability for Vision Transformers (in PyTorch)
 
-This repository implements methods for explainability in Visual Transformers.
+This repository implements methods for explainability in Vision Transformers.
 
 ## Currently implemented:
 - Attention Rollout.
