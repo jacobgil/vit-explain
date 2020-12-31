@@ -73,11 +73,9 @@ The Attention that flows in the transformer passes along information belonging t
 Gradient roll out lets us see what locations the network paid attention too, 
 but it tells us nothing about if it ended up using those locations for the final classification.
 
-We can multiply the attention with the gradient of the target class output, 
-and mask out negative gradients, to keep only attention that contributes to the target category (or categories).
+We can multiply the attention with the gradient of the target class output, and then take the average among the attention heads (and mask out negative attentions).
+Where does the Transformer see a Dog (category 243), and a Cat (category 282)?
 
-
-### Where does the Transformer see a Dog (category 243), and a Cat (category 282)?
 ![](examples/both_grad_rollout_243_0.900_max.png) ![](examples/both_grad_rollout_282_0.900_max.png)
 
 ### Where does the Transformer see a Musket dog (category 161) and a Parrot (category 87):
