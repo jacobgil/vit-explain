@@ -11,7 +11,6 @@ def grad_rollout(attentions, gradients, discard_ratio):
     with torch.no_grad():
         for attention, grad in zip(attentions, gradients):                
             weights = grad
-            weights[weights < 0] = 0
             attention_heads_fused = (attention*weights).mean(axis=1)
             attention_heads_fused[attention_heads_fused < 0] = 0
 

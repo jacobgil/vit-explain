@@ -37,7 +37,7 @@ otherwise Gradient Attention Rollout will be used.
 
 Notice that by default, this uses the 'Tiny' model from [Training data-efficient image transformers & distillation through attention](https://arxiv.org/abs/2012.12877)
  hosted on torch hub.
- 
+
 ##Where did the Transformer pay attention to in this image?##
 | Image | Vanilla Attention Rollout  |  With discard_ratio+max fusion |
 | -------------------------|-------------------------|------------------------- |
@@ -81,7 +81,7 @@ and mask out negative gradients, to keep only attention that contributes to the 
 ![](examples/both_grad_rollout_243_0.900_max.png) ![](examples/both_grad_rollout_282_0.900_max.png)
 
 ### Where does the Transformer see a Musket dog (category 161) and a Parrot (category 87):
-![](examples/grad_rollout_161_0.900_max.png) ![](examples/dogbird_grad_rollout_87_0.900_max.png)
+![](examples/dogbird_grad_rollout_161_0.900_max.png) ![](examples/dogbird_grad_rollout_87_0.900_max.png)
 
 ## References
 - [Quantifying Attention Flow in Transformers](https://arxiv.org/abs/2005.00928)
