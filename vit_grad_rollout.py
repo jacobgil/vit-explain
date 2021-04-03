@@ -6,6 +6,8 @@ from torchvision import transforms
 import numpy as np
 import cv2
 
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
 def grad_rollout(attentions, gradients, discard_ratio):
     result = torch.eye(attentions[0].size(-1))
     with torch.no_grad():
@@ -57,7 +59,7 @@ class VITAttentionGradRollout:
     def __call__(self, input_tensor, category_index):
         self.model.zero_grad()
         output = self.model(input_tensor)
-        category_mask = torch.zeros(output.size())
+        category_mask = torch.zeros(output.size()).to(DEVICE)
         category_mask[:, category_index] = 1
         loss = (output*category_mask).sum()
         loss.backward()
