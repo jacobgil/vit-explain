@@ -25,7 +25,7 @@ from vit_grad_rollout import VITAttentionGradRollout
 
 model = torch.hub.load('facebookresearch/deit:main', 
 'deit_tiny_patch16_224', pretrained=True)
-grad_rollout = VITAttentionGradRollout(model, discard_ratio=0.9, head_fusion='max')
+grad_rollout = VITAttentionGradRollout(model, discard_ratio=0.9)
 mask = grad_rollout(input_tensor, category_index=243)
 
 ```
